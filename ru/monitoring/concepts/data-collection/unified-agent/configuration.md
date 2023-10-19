@@ -16,9 +16,9 @@
 
 Чтобы использовать файл конфигурации, передайте путь к нему в параметр командной строки `--config` при запуске агента. Например:
 ```bash
-/usr/bin/unified_agent --config /etc/yandex/unified_agent/config.yml
+/usr/bin/unified_agent --config /etc/yc/unified_agent/config.yml
 ```
-При использовании {{ unified-agent-short-name }}, поставляемого в виде deb-пакета, базовый файл конфигурации `/etc/yandex/unified_agent/config.yml` автоматически устанавливается и передается в параметр `--config`.
+При использовании {{ unified-agent-short-name }}, поставляемого в виде deb-пакета, базовый файл конфигурации `/etc/yc/unified_agent/config.yml` автоматически устанавливается и передается в параметр `--config`.
 
 Пользовательскую конфигурацию рекомендуется добавлять в отдельный файл в директории `/etc/yandex/unified_agent/conf.d`. Файлы из этой директории импортируются из базового файла конфигурации с помощью директивы `import` в алфавитном порядке. Механизм импорта описан в секции [{#T}](#import) данного раздела.
 
@@ -47,7 +47,7 @@
 
 Чтобы провалидировать настройки агента, выполните команду:
 ```bash
-unified_agent --config /etc/yandex/unified_agent/config.yml check-config
+unified_agent --config /etc/yc/unified_agent/config.yml check-config
 ```
 
 Если валидация успешна, агент выведет в `stdout` итоговый вариант после выполнения всех импортов и вернет нулевой код возврата.
